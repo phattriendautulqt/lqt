@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LQT – Phát Triển Năng Lực Đầu Tư Cùng LQT</title>
+  <meta name="description" content="LQT – Liquid Quantitative Technologies: ứng dụng nghiên cứu, thống kê, phân tích định lượng và công nghệ trong giao dịch tài chính. Hệ sinh thái 3 mảnh ghép: Membership, Xbot, Coaching Đồng Hành Quỹ FTMO.">
+  <meta name="theme-color" content="#060f22">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:title" content="Phát Triển Năng Lực Đầu Tư Cùng LQT">
+  <meta property="og:description" content="Chúng tôi kiến tạo môi trường để bạn làm chủ cuộc chơi tài chính của chính mình.">
+  <meta property="og:image" content="assets/logo-lqt-nen-navy.jpg">
+  <link rel="icon" href="assets/logo-lqt-nen-navy.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#noi-dung">Bỏ qua tới nội dung chính</a>
+
+  <!-- Bộ icon dùng chung -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.4-4.3A8.5 8.5 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14a6.5 6.5 0 0 1 3.5 6"/></symbol>
+      <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-7"/></symbol>
+      <symbol id="i-sigma" viewBox="0 0 24 24"><path d="M18 5H6l6 7-6 7h12"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol>
+      <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/></symbol>
+      <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3z"/><path d="M9 8h6M9 12h6"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+      <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8z"/></symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2L12 3z"/><path d="M12 10v4M12 17.5h.01"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></symbol>
+      <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- 1. ĐẦU TRANG -->
+  <header class="site-header" id="dau-trang">
+    <div class="container header-inner">
+      <a class="brand" href="#trang-chu" aria-label="LQT – về đầu trang">
+        <span class="logo-tile"><img src="assets/logo-lqt-nen-navy.jpg" alt="" width="40" height="40"></span>
+        <span class="brand-text"><strong>LQT</strong><small>Liquid Quantitative Technologies</small></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Điều hướng chính">
+        <ul>
+          <li><a href="#ve-chung-toi">Về chúng tôi</a></li>
+          <li><a href="#he-sinh-thai">Hệ sinh thái</a></li>
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#xbot">Xbot</a></li>
+          <li><a href="#coaching-ftmo">Coaching FTMO</a></li>
+          <li><a href="#bang-gia">Bảng giá</a></li>
+          <li><a href="#lien-he">Liên hệ</a></li>
+        </ul>
+        <div class="nav-mobile-cta">
+          <a class="btn btn-gold btn-block" href="#bang-gia">Đăng ký Membership</a>
+          <a class="btn btn-outline btn-block" href="https://zalo.me/0975637026" target="_blank" rel="noopener">Nhắn Zalo tư vấn</a>
+        </div>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-gold btn-sm" href="#bang-gia">Đăng ký Membership</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Mở menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="noi-dung">
+
+    <!-- 2. HERO -->
+    <section class="hero dark" id="trang-chu" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="pill reveal"><span class="hex-dot" aria-hidden="true"></span>Hệ sinh thái đầu tư chuyên nghiệp</p>
+        <h1 id="hero-title" class="hero-title reveal">Phát Triển Năng Lực Đầu Tư <span class="gold">Cùng LQT</span></h1>
+        <p class="hero-sub reveal">Chúng tôi kiến tạo môi trường để bạn làm chủ cuộc chơi tài chính của chính mình.</p>
+        <div class="btn-row center reveal">
+          <a class="btn btn-gold btn-lg" href="#bang-gia">Đăng ký Membership <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-outline btn-lg" href="https://zalo.me/0975637026" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Nhắn Zalo tư vấn</a>
+        </div>
+        <ul class="pillars reveal" aria-label="Ba trụ cột">
+          <li>Hệ thống kiến thức chuẩn hóa</li>
+          <li>Tư duy giao dịch</li>
+          <li>Điểm tựa đồng hành</li>
+        </ul>
+
+        <!-- Giao diện minh họa hệ sinh thái -->
+        <div class="hero-mock reveal" aria-label="Minh họa hệ sinh thái LQT">
+          <div class="mock-bar">
+            <span class="mock-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="mock-title">Hệ sinh thái LQT</span>
+            <span class="mock-status"><span class="live" aria-hidden="true"></span>3 mảnh ghép</span>
+          </div>
+          <div class="mock-body">
+            <a class="mock-tile" href="#membership">
+              <span class="hex-num">01</span>
+              <strong>Membership</strong>
+              <span>Cộng đồng sinh hoạt chuyên môn</span>
+              <em>Định hướng kế hoạch đầu tư &amp; hướng dẫn hành xử</em>
+            </a>
+            <a class="mock-tile" href="#xbot">
+              <span class="hex-num">02</span>
+              <strong>Xbot</strong>
+              <span>Đòn bẩy công nghệ thực thi kỷ luật</span>
+              <em>Thực thi 100% kịch bản do chính bạn vạch ra</em>
+            </a>
+            <a class="mock-tile" href="#coaching-ftmo">
+              <span class="hex-num">03</span>
+              <strong>Coaching FTMO</strong>
+              <span>Kiến trúc sư hệ thống</span>
+              <em>Lộ trình 3 tháng đồng hành thi quỹ</em>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. VỀ CHÚNG TÔI -->
+    <section class="section light" id="ve-chung-toi" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head center">
+          <p class="tag reveal">Về chúng tôi</p>
+          <h2 id="about-title" class="section-title reveal">Từ cá nhân đơn lẻ đến<br><span class="gold-dark">hệ sinh thái đầu tư chuyên nghiệp</span></h2>
+        </div>
+        <div class="grid grid-3">
+          <article class="card reveal">
+            <span class="card-icon"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg></span>
+            <h3>Vấn đề của thị trường</h3>
+            <p>Thị trường tài chính không thiếu những lời hứa hẹn, nhưng thiếu một môi trường chuẩn mực để những nhà đầu tư thực thụ sinh hoạt và phát triển.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><svg class="ic" aria-hidden="true"><use href="#i-sigma"/></svg></span>
+            <h3>Đội ngũ LQT</h3>
+            <p>Những con người đam mê nghiên cứu, chuyên tâm bóc tách dữ liệu để biến chúng thành lợi thế giao dịch.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon"><svg class="ic" aria-hidden="true"><use href="#i-layers"/></svg></span>
+            <h3>Bài học đúc kết</h3>
+            <p>Để phát triển bền vững, vài tín hiệu mua bán là không đủ. Bạn cần một hệ sinh thái đồng bộ, một môi trường chuẩn mực.</p>
+          </article>
+        </div>
+        <div class="about-band reveal">
+          <div class="about-stat"><span class="stat-num">8–10</span><span class="stat-label">năm đào tạo và làm việc trực tiếp với nhà đầu tư cá nhân</span></div>
+          <p>“Phát triển năng lực đầu tư cùng LQT” được thai nghén từ hành trình đó – nơi chúng tôi hiện thực hóa các sản phẩm chuyên môn cùng cộng đồng nhà đầu tư, với <strong>3 mảnh ghép chiến lược</strong> cho từng giai đoạn của một nhà đầu tư chuyên nghiệp.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ĐIỂM KHÁC BIỆT -->
+    <section class="section dark" id="diem-khac-biet" aria-labelledby="diff-title">
+      <div class="container split">
+        <div>
+          <p class="tag tag-dark reveal">Điểm khác biệt</p>
+          <h2 id="diff-title" class="section-title reveal">Chúng tôi không bán những lệnh giao dịch ngắn hạn</h2>
+          <p class="lead reveal">LQT ứng dụng nghiên cứu, thống kê, phân tích định lượng và công nghệ trong giao dịch tài chính – để bạn tự làm chủ quyết định của mình.</p>
+          <ul class="check-rows">
+            <li class="reveal"><span class="check" aria-hidden="true"><svg class="ic"><use href="#i-check"/></svg></span><div><h3>Không “phím kèo”, không room tín hiệu</h3><p>Không biến bạn thành người chạy theo tín hiệu của người khác.</p></div></li>
+            <li class="reveal"><span class="check" aria-hidden="true"><svg class="ic"><use href="#i-check"/></svg></span><div><h3>Dựa trên dữ liệu và định lượng</h3><p>Nghiên cứu, thống kê và phân tích định lượng ứng dụng trên thị trường tài chính.</p></div></li>
+            <li class="reveal"><span class="check" aria-hidden="true"><svg class="ic"><use href="#i-check"/></svg></span><div><h3>Hệ sinh thái theo từng giai đoạn</h3><p>Ba mảnh ghép thiết kế cho từng giai đoạn phát triển của nhà đầu tư.</p></div></li>
+            <li class="reveal"><span class="check" aria-hidden="true"><svg class="ic"><use href="#i-check"/></svg></span><div><h3>Môi trường chuẩn mực</h3><p>Mài giũa kỷ luật, giữ cái đầu lạnh và tự do tận hưởng cuộc sống.</p></div></li>
+          </ul>
+        </div>
+        <div class="panel reveal" aria-label="Nguyên tắc làm việc của LQT">
+          <div class="panel-head">
+            <span class="panel-logo"><img src="assets/logo-lqt-nen-navy.jpg" alt="" width="40" height="40"></span>
+            <div><strong>Nguyên tắc LQT</strong><small>Áp dụng cho cả 3 mảnh ghép</small></div>
+          </div>
+          <ul class="panel-rows">
+            <li><span class="row-ic"><svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg></span><div><strong>Nghiên cứu &amp; thống kê</strong><small>Bóc tách dữ liệu thành lợi thế giao dịch</small></div><span class="chip">Cốt lõi</span></li>
+            <li><span class="row-ic"><svg class="ic" aria-hidden="true"><use href="#i-sigma"/></svg></span><div><strong>Phân tích định lượng</strong><small>Chuẩn hóa góc nhìn đa khung thời gian</small></div><span class="chip">Cốt lõi</span></li>
+            <li><span class="row-ic"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></span><div><strong>Quản trị rủi ro</strong><small>Khung quản trị trước khi vận hành vốn lớn</small></div><span class="chip">Cốt lõi</span></li>
+            <li><span class="row-ic"><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg></span><div><strong>Kỷ luật theo kịch bản</strong><small>Thực thi đúng kế hoạch bạn đã vạch ra</small></div><span class="chip">Cốt lõi</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. HỆ SINH THÁI 3 MẢNH GHÉP -->
+    <section class="section light" id="he-sinh-thai" aria-labelledby="eco-title">
+      <div class="container">
+        <div class="section-head center">
+          <p class="tag reveal">Hệ sinh thái chiến lược</p>
+          <h2 id="eco-title" class="section-title reveal">3 Mảnh Ghép Định Hình<br>Nhà Đầu Tư Chuyên Nghiệp</h2>
+          <p class="lead reveal">Mỗi mảnh ghép dành cho một giai đoạn. Dùng riêng từng mảnh, hoặc kết hợp để đi trọn hành trình.</p>
+        </div>
+        <div class="grid grid-3">
+          <a class="card card-link reveal" href="#membership">
+            <span class="hex-num">01</span>
+            <h3>Membership</h3>
+            <p class="card-sub">Cộng đồng sinh hoạt chuyên môn</p>
+            <p>Định hướng kế hoạch đầu tư và hướng dẫn hành xử cho nhà đầu tư đã có nền tảng.</p>
+            <span class="more">Xem chi tiết <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="card card-link reveal" href="#xbot">
+            <span class="hex-num">02</span>
+            <h3>Xbot</h3>
+            <p class="card-sub">Đòn bẩy công nghệ thực thi kỷ luật</p>
+            <p>Trợ lý tự động hóa, thực thi 100% kịch bản theo hệ thống của chính bạn.</p>
+            <span class="more">Xem chi tiết <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="card card-link reveal" href="#coaching-ftmo">
+            <span class="hex-num">03</span>
+            <h3>Coaching Đồng Hành Quỹ FTMO</h3>
+            <p class="card-sub">Kiến trúc sư hệ thống</p>
+            <p>Lộ trình 3 tháng rèn kỷ luật và quản trị rủi ro để vượt qua các vòng thi quỹ.</p>
+            <span class="more">Xem chi tiết <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. MEMBERSHIP -->
+    <section class="section light alt" id="membership" aria-labelledby="mem-title">
+      <div class="container">
+        <div class="product reveal">
+          <div class="product-text">
+            <p class="tag"><span class="hex-dot" aria-hidden="true"></span>Mảnh ghép 01 · Membership</p>
+            <h2 id="mem-title" class="product-title">Cộng đồng sinh hoạt chuyên môn</h2>
+            <p>Đây không phải room phím lệnh. Membership là nơi kiểm soát thông tin, giúp chuẩn hóa góc nhìn đa khung thời gian và loại bỏ nhiễu loạn từ đám đông.</p>
+            <p class="fit"><strong>Phù hợp với:</strong> nhà đầu tư đã có nền tảng, cần góc nhìn chuyên gia khách quan và cộng đồng đồng cấp để tham chiếu.</p>
+            <ul class="ticks">
+              <li>Các chuyên đề nghiên cứu và phân tích định lượng ứng dụng trên thị trường tài chính</li>
+              <li>Nhận diện hành xử tuần và tổng kết tháng</li>
+              <li>Ưu đãi trải nghiệm sản phẩm giải pháp công nghệ ứng dụng trong chứng khoán</li>
+            </ul>
+            <div class="btn-row">
+              <a class="btn btn-navy" href="#bang-gia">Xem bảng giá <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+          <div class="product-visual">
+            <div class="ui-card" aria-label="Minh họa: bản nhận diện hành xử tuần">
+              <div class="ui-head">
+                <span class="ui-ic"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg></span>
+                <div><strong>Nhận diện hành xử tuần</strong><small>Dành riêng cho thành viên</small></div>
+              </div>
+              <p class="ui-label">Thị trường theo dõi</p>
+              <ul class="ui-markets">
+                <li><span>Forex</span><em>Kịch bản tuần</em></li>
+                <li><span>Vàng (XAUUSD)</span><em>Kịch bản tuần</em></li>
+                <li><span>Bitcoin (BTC)</span><em>Kịch bản tuần</em></li>
+                <li><span>Dầu (USOIL)</span><em>Kịch bản tuần</em></li>
+                <li><span>Chứng khoán cơ sở VN</span><em>Kịch bản tuần</em></li>
+              </ul>
+              <div class="ui-foot"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Tổng kết tháng · Chuyên đề nghiên cứu</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. XBOT -->
+    <section class="section light alt" id="xbot" aria-labelledby="xbot-title">
+      <div class="container">
+        <div class="product product-reverse reveal">
+          <div class="product-text">
+            <p class="tag"><span class="hex-dot" aria-hidden="true"></span>Mảnh ghép 02 · Xbot</p>
+            <h2 id="xbot-title" class="product-title">Hệ sinh thái ứng dụng đòn bẩy công nghệ</h2>
+            <p>Xbot không phải cỗ máy “phím kèo” bên ngoài khiến bạn trở thành nô lệ của những tín hiệu. Đây là trợ lý cần mẫn, tự động hóa và thực thi chính xác 100% kịch bản do chính bạn vạch ra theo một hệ thống chuyên nghiệp.</p>
+            <p class="fit"><strong>Phù hợp với:</strong> người đã có hệ thống giao dịch rõ ràng nhưng không đủ thời gian bám sát biểu đồ 24/7; nhà giao dịch trung và dài hạn còn hạn chế về năng lực thực thi lệnh.</p>
+            <div class="btn-row">
+              <a class="btn btn-navy" href="https://zalo.me/0975637026" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Nhắn Zalo tư vấn</a>
+            </div>
+            <p class="note">Giá: tư vấn trực tiếp.</p>
+          </div>
+          <div class="product-visual">
+            <div class="ui-card" aria-label="Minh họa: Xbot thực thi kịch bản của bạn">
+              <div class="flow">
+                <div class="flow-box">
+                  <small>Bước 1</small>
+                  <strong>Kịch bản của bạn</strong>
+                  <span>Hệ thống giao dịch do bạn vạch ra</span>
+                </div>
+                <div class="flow-arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></div>
+                <div class="flow-box flow-gold">
+                  <small>Bước 2</small>
+                  <strong>Xbot thực thi</strong>
+                  <span>Tự động hóa, đúng kỷ luật</span>
+                </div>
+              </div>
+              <ul class="ui-status">
+                <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>Bám sát thị trường thay bạn<em>24/7</em></li>
+                <li><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg>Thực thi đúng kịch bản<em>100%</em></li>
+                <li><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>Theo hệ thống chuyên nghiệp<em>Kỷ luật</em></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. COACHING ĐỒNG HÀNH QUỸ FTMO -->
+    <section class="section dark" id="coaching-ftmo" aria-labelledby="ftmo-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="tag tag-dark reveal">Mảnh ghép 03 · Coaching</p>
+          <h2 id="ftmo-title" class="section-title reveal">Coaching Đồng Hành Quỹ <span class="gold">FTMO</span></h2>
+          <p class="lead reveal">Kiến trúc sư hệ thống &amp; “lò luyện kim” bản lĩnh. Không dừng ở lý thuyết: đồng hành thực chiến, thiết lập khung quản trị rủi ro, đóng gói bộ quy tắc giao dịch cá nhân hóa – nền tảng vững chắc trước khi ứng dụng Bot hay vận hành dòng vốn lớn.</p>
+        </div>
+        <div class="ftmo-layout">
+          <div class="ftmo-side">
+            <div class="panel reveal">
+              <h3 class="panel-h">Dành cho ai</h3>
+              <p class="muted">Người muốn sở hữu hệ thống giao dịch thi quỹ bài bản để vượt qua các kỳ sát hạch FTMO khắt khe và rèn tư duy kỷ luật chuyên nghiệp.</p>
+            </div>
+            <div class="panel duration reveal">
+              <span class="duration-hex" aria-hidden="true"><b>3</b>tháng</span>
+              <p><strong>Thực hành chuyên sâu 3 tháng</strong> – hệ thống hóa lý thuyết chuẩn mực kết hợp thực hành trực tiếp trên thị trường; hoàn thiện kỹ năng kiểm soát lệnh và quản trị rủi ro để vượt qua các vòng thi quỹ.</p>
+            </div>
+            <a class="btn btn-gold btn-block reveal" href="https://zalo.me/0975637026" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Nhắn Zalo tư vấn Coaching FTMO</a>
+            <p class="note note-dark reveal">Giá: tư vấn trực tiếp.</p>
+          </div>
+          <div class="ftmo-roadmap">
+            <h3 class="roadmap-title reveal">Lộ trình huấn luyện</h3>
+            <ol class="ftl" aria-label="Lộ trình huấn luyện 3 tháng">
+              <li class="ftl-item reveal"><span class="ftl-node" aria-hidden="true">1</span><div class="ftl-card"><p class="ftl-when">01 buổi</p><h4>Phiên giới thiệu &amp; kiến tạo cuộc chơi FTMO</h4></div></li>
+              <li class="ftl-item reveal"><span class="ftl-node" aria-hidden="true">2</span><div class="ftl-card"><p class="ftl-when">01 buổi</p><h4>Huấn luyện offline kiến thức</h4></div></li>
+              <li class="ftl-item reveal"><span class="ftl-node" aria-hidden="true">3</span><div class="ftl-card"><p class="ftl-when">20:00 thứ Tư hằng tuần</p><h4>Phiên huấn luyện kỹ năng qua Zoom trực tuyến</h4></div></li>
+              <li class="ftl-item reveal"><span class="ftl-node" aria-hidden="true">4</span><div class="ftl-card"><p class="ftl-when">30 phút/tuần</p><h4>Cuộc gọi huấn luyện 1:1</h4><p>Sắp xếp trực tiếp với Mentor.</p></div></li>
+              <li class="ftl-item ftl-final reveal"><span class="ftl-node" aria-hidden="true">★</span>
+                <div class="ftl-card">
+                  <p class="ftl-when">Đặc quyền đồng hành</p>
+                  <ul class="perks">
+                    <li><strong>Học lại 01 lần</strong> ở khóa kế tiếp, không phát sinh học phí.</li>
+                    <li><strong>Tặng 3 tháng tổng quan:</strong> báo cáo nhận diện thị trường hằng tuần + Zoom hành xử thực chiến thứ Hai mỗi tuần (tương đương quyền lợi Membership).</li>
+                    <li><strong>Cộng đồng thực hành FTMO</strong> để trao đổi kinh nghiệm, duy trì kỷ luật dài hạn.</li>
+                  </ul>
+                </div>
+              </li>
+            </ol>
+            <p class="slogan reveal">Đồng hành kỷ luật • Quản trị rủi ro • Chinh phục thành công quỹ FTMO!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vị trí dành cho phần Feedback học viên (bổ sung sau) -->
+
+    <!-- 9. BẢNG GIÁ & THANH TOÁN -->
+    <section class="section light" id="bang-gia" aria-labelledby="price-title">
+      <div class="container">
+        <div class="section-head center">
+          <p class="tag reveal">Bảng giá</p>
+          <h2 id="price-title" class="section-title reveal">Chọn mảnh ghép phù hợp với bạn</h2>
+        </div>
+        <div class="pricing">
+          <article class="price-card reveal">
+            <p class="plan">Membership</p>
+            <h3>Gói 3 tháng</h3>
+            <p class="amount">1.500.000đ</p>
+            <ul class="ticks small">
+              <li>Chuyên đề nghiên cứu &amp; phân tích định lượng</li>
+              <li>Nhận diện hành xử tuần, tổng kết tháng</li>
+              <li>Ưu đãi trải nghiệm sản phẩm công nghệ</li>
+            </ul>
+            <a class="btn btn-outline-dark btn-block" href="#thanh-toan">Chuyển khoản gói 3 tháng</a>
+          </article>
+          <article class="price-card featured reveal">
+            <span class="badge">Tặng thêm 1 tháng</span>
+            <p class="plan">Membership</p>
+            <h3>Gói 6 tháng</h3>
+            <p class="amount">3.000.000đ</p>
+            <p class="amount-note">Sử dụng 7 tháng</p>
+            <ul class="ticks small">
+              <li>Toàn bộ quyền lợi Membership</li>
+              <li>Tặng thêm 1 tháng sử dụng</li>
+            </ul>
+            <a class="btn btn-gold btn-block" href="#thanh-toan">Chuyển khoản gói 6 tháng</a>
+          </article>
+          <article class="price-card reveal">
+            <p class="plan">Mảnh ghép 02</p>
+            <h3>Xbot</h3>
+            <p class="amount amount-sm">Tư vấn trực tiếp</p>
+            <p class="muted-dark">Trao đổi với trợ lý để được tư vấn theo hệ thống giao dịch của bạn.</p>
+            <a class="btn btn-outline-dark btn-block" href="https://zalo.me/0975637026" target="_blank" rel="noopener">Nhắn Zalo tư vấn</a>
+          </article>
+          <article class="price-card reveal">
+            <p class="plan">Mảnh ghép 03</p>
+            <h3>Coaching FTMO</h3>
+            <p class="amount amount-sm">Tư vấn trực tiếp</p>
+            <p class="muted-dark">Lộ trình 3 tháng, học lại 01 lần, tặng 3 tháng tổng quan.</p>
+            <a class="btn btn-outline-dark btn-block" href="https://zalo.me/0975637026" target="_blank" rel="noopener">Nhắn Zalo tư vấn</a>
+          </article>
+        </div>
+
+        <div class="payment reveal" id="thanh-toan">
+          <div class="pay-head">
+            <span class="card-icon gold-ic"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg></span>
+            <div><h3>Thanh toán chuyển khoản</h3><p>Quét mã QR hoặc chuyển khoản theo thông tin bên dưới.</p></div>
+          </div>
+          <div class="pay-grid">
+            <figure class="qr">
+              <img src="assets/qr-vpbank-lqt.webp" alt="Mã VietQR VPBank – HKD PHAT TRIEN DAU TU LQT – 696256818" width="1022" height="2000">
+            </figure>
+            <div>
+              <dl class="bank">
+                <div><dt>Ngân hàng</dt><dd>VPBank</dd></div>
+                <div><dt>Số tài khoản</dt><dd><span class="acc">696256818</span>
+                  <button class="btn btn-copy" type="button" data-copy="696256818" data-copy-name="số tài khoản"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span class="copy-label">Sao chép</span></button></dd></div>
+                <div><dt>Chủ tài khoản</dt><dd>HKD PHAT TRIEN DAU TU LQT</dd></div>
+              </dl>
+              <h4 class="memo-title">Nội dung chuyển khoản</h4>
+              <ul class="memo">
+                <li><span class="memo-for">Membership</span><code>Phí hội viên - Họ tên - SĐT</code><button class="btn btn-copy" type="button" data-copy="Phí hội viên - Họ tên - SĐT" data-copy-name="mẫu nội dung Membership"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span class="copy-label">Sao chép</span></button></li>
+                <li><span class="memo-for">Coaching FTMO</span><code>Phí dịch vụ hỗ trợ chuyên sâu - Họ tên - SĐT</code><button class="btn btn-copy" type="button" data-copy="Phí dịch vụ hỗ trợ chuyên sâu - Họ tên - SĐT" data-copy-name="mẫu nội dung Coaching FTMO"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span class="copy-label">Sao chép</span></button></li>
+                <li><span class="memo-for">Xbot</span><code>DV HD phần mềm - Họ tên - SĐT</code><button class="btn btn-copy" type="button" data-copy="DV HD phần mềm - Họ tên - SĐT" data-copy-name="mẫu nội dung Xbot"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span class="copy-label">Sao chép</span></button></li>
+              </ul>
+              <p class="memo-hint">Thay “Họ tên – SĐT” bằng thông tin của bạn.</p>
+              <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="step-n">1</span><div><strong>Chuyển khoản</strong><p>Theo số tài khoản hoặc mã QR, ghi đúng mẫu nội dung.</p></div></li>
+            <li><span class="step-n">2</span><div><strong>Chụp biên lai</strong><p>Lưu ảnh biên lai chuyển khoản thành công.</p></div></li>
+            <li><span class="step-n">3</span><div><strong>Gửi qua Zalo trợ lý</strong><p>Để được xác nhận và thêm vào Membership.</p></div></li>
+          </ol>
+          <div class="btn-row">
+            <a class="btn btn-gold" href="https://zalo.me/0975637026" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Gửi biên lai – CSKH Trợ lý 1</a>
+            <a class="btn btn-outline" href="https://zalo.me/0354172556" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Gửi biên lai – CSKH Trợ lý 2</a>
+          </div>
+          <p class="disclaimer"><strong>Miễn trừ trách nhiệm:</strong> Mọi nội dung của LQT chỉ nhằm mục đích giáo dục và tham khảo, không phải khuyến nghị mua, bán hay nắm giữ bất kỳ tài sản nào. Đầu tư tài chính luôn có rủi ro, có thể mất một phần hoặc toàn bộ vốn; hiệu quả trong quá khứ không đảm bảo kết quả tương lai. Bạn tự chịu trách nhiệm với quyết định của mình. LQT không chịu trách nhiệm pháp lý với tổn thất phát sinh từ việc sử dụng thông tin. Đăng ký dịch vụ đồng nghĩa với việc bạn đồng ý với tuyên bố này.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. LIÊN HỆ -->
+    <section class="section dark cta-section" id="lien-he" aria-labelledby="contact-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container center-col">
+        <p class="pill reveal"><span class="hex-dot" aria-hidden="true"></span>Liên hệ</p>
+        <h2 id="contact-title" class="section-title reveal">Bắt đầu phát triển năng lực đầu tư <span class="gold">cùng LQT</span></h2>
+        <p class="lead reveal">Nhắn tin trực tiếp để được tư vấn và đăng ký.</p>
+        <div class="btn-row center reveal">
+          <a class="btn btn-gold btn-lg" href="https://zalo.me/0975637026" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Nhắn Zalo – CSKH Trợ lý 1</a>
+          <a class="btn btn-outline btn-lg" href="https://zalo.me/0354172556" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Nhắn Zalo – CSKH Trợ lý 2</a>
+        </div>
+        <ul class="contact-links reveal">
+          <li><a href="mailto:cskhlqt@gmail.com"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>cskhlqt@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/phattriennanglucdautu/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-fb"/></svg>Phát Triển Năng Lực Đầu Tư Cùng LQT</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- 11. CHÂN TRANG -->
+  <footer class="site-footer" id="chan-trang">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-tile lg"><img src="assets/logo-lqt-nen-navy.jpg" alt="Logo LQT – Liquid Quantitative Technologies" width="56" height="56"></span>
+          <p>Ứng dụng nghiên cứu, thống kê, phân tích định lượng và công nghệ trong giao dịch tài chính.</p>
+        </div>
+        <div>
+          <h2 class="footer-h">Sản phẩm</h2>
+          <ul class="footer-links">
+            <li><a href="#membership">Membership</a></li>
+            <li><a href="#xbot">Xbot</a></li>
+            <li><a href="#coaching-ftmo">Coaching Đồng Hành Quỹ FTMO</a></li>
+            <li><a href="#bang-gia">Bảng giá</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-h">Liên hệ</h2>
+          <ul class="footer-links">
+            <li><a href="https://zalo.me/0975637026" target="_blank" rel="noopener">Nhắn Zalo – CSKH Trợ lý 1</a></li>
+            <li><a href="https://zalo.me/0354172556" target="_blank" rel="noopener">Nhắn Zalo – CSKH Trợ lý 2</a></li>
+            <li><a href="mailto:cskhlqt@gmail.com">cskhlqt@gmail.com</a></li>
+            <li><a href="https://www.facebook.com/phattriennanglucdautu/" target="_blank" rel="noopener">Fanpage Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-disclaimer"><strong>Miễn trừ trách nhiệm:</strong> Mọi nội dung của LQT chỉ nhằm mục đích giáo dục và tham khảo, không phải khuyến nghị mua, bán hay nắm giữ bất kỳ tài sản nào. Đầu tư tài chính luôn có rủi ro, có thể mất một phần hoặc toàn bộ vốn; hiệu quả trong quá khứ không đảm bảo kết quả tương lai. Bạn tự chịu trách nhiệm với quyết định của mình. LQT không chịu trách nhiệm pháp lý với tổn thất phát sinh từ việc sử dụng thông tin. Đăng ký dịch vụ đồng nghĩa với việc bạn đồng ý với tuyên bố này.</p>
+      <p class="copyright">© 2026 Liquid Quantitative Technologies – HKD Phát Triển Đầu Tư LQT</p>
+    </div>
+  </footer>
+
+  <!-- Thanh liên hệ cố định cuối màn hình (chỉ trên điện thoại) – không che nội dung -->
+  <div class="mobile-bar" role="region" aria-label="Liên hệ nhanh">
+    <a class="btn btn-outline" href="https://zalo.me/0975637026" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Nhắn Zalo</a>
+    <a class="btn btn-gold" href="#bang-gia">Đăng ký Membership</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
